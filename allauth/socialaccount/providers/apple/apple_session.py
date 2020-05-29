@@ -31,7 +31,7 @@ def persist_apple_session(request, response):
         expires=None,
         domain=settings.SESSION_COOKIE_DOMAIN,
         # The cookie is only needed on this endpoint
-        path=urlparse(response.url).path,
+        path=response.url,
         secure=True,
         httponly=None,
         samesite=settings.SESSION_COOKIE_SAMESITE,
